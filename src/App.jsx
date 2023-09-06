@@ -27,18 +27,21 @@ const App = () => {
   return (
     <>
       <div>
-        Search:
-        <input
-          placeholder="Enter a country here..."
-          value={query}
-          onChange={handleQueryChange}
-        />
-        <CountryView
-          names={namesToShow}
-          query={query}
-          showCountry={showCountry}
-          setShowCountry={setShowCountry}
-        />
+        <div className="search-bar">
+          <input
+            placeholder="Start typing to search a country..."
+            value={query}
+            onChange={handleQueryChange}
+          />
+        </div>
+        <div className="country-view">
+          <CountryView
+            names={namesToShow}
+            query={query}
+            showCountry={showCountry}
+            setShowCountry={setShowCountry}
+          />
+        </div>
       </div>
     </>
   );

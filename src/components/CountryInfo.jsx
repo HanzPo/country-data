@@ -15,9 +15,9 @@ const CountryInfo = ({ countryName }) => {
     return (
       <>
         <h1>{selectedCountry.name.common}</h1>
-        <div>capital {selectedCountry.capital[0]}</div>
-        <div>area {selectedCountry.area}</div>
-        <h3>languages:</h3>
+        <div>Capital: {selectedCountry.capital[0]}</div>
+        <div>Area: {selectedCountry.area.toLocaleString("en-US")} km&#178;</div>
+        <h3>Languages:</h3>
         <ul>
           {Object.values(selectedCountry.languages).map((language) => (
             <li key={language}>{language}</li>

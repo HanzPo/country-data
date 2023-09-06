@@ -16,7 +16,7 @@ const CountryView = ({ names, query, showCountry, setShowCountry }) => {
   }
 
   if (query === "") {
-    return <div>Start typing to search for a country</div>;
+    return <div></div>;
   }
 
   if (names.length > 10) {
